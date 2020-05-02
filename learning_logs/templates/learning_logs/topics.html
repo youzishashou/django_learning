@@ -1,5 +1,5 @@
 
-# 继承模板
+
 {% extends "learning_logs/base.html" %}
 
 {% block content %}
@@ -7,7 +7,7 @@
     <p>topics</p>
     <ul>
         {%  for topic in topics  %}
-            <li>{{topic}}</li>
+            <li><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></li>
         {%  empty  %}
             <li>No topics have been added yet.</li>
         {%  endfor  %}

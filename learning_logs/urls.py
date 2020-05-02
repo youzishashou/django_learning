@@ -10,5 +10,8 @@ urlpatterns = [
     path('',views.index,name='index'),
 
     # 显示所有主题
-path('topics/',views.topics,name='topics'),
+    path('topics/',views.topics,name='topics'),
+
+    # 各个主题
+    path('topics/(?P<topic_id>\d+)/', views.topic, name='topic'),
 ]
