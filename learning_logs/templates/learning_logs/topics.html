@@ -1,0 +1,15 @@
+
+# 继承模板
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+    <p>topics</p>
+    <ul>
+        {%  for topic in topics  %}
+            <li>{{topic}}</li>
+        {%  empty  %}
+            <li>No topics have been added yet.</li>
+        {%  endfor  %}
+    </ul>
+{% endblock content %}
