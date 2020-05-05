@@ -16,9 +16,12 @@ urlpatterns = [
     #添加新条目
     path('add_new_entry/(?P<topic_id>\d+)/', views.add_new_entry, name='add_new_entry'),
 
+    #编辑条目
+    path('edit_entry/(?P<entry_id>\d+)/', views.edit_entry, name='edit_entry'),
     # 各个主题
     path('topics/(?P<topic_id>\d+)/', views.topic, name='topic'),
 
     #添加新主题
-    path('add_new_topic',views.add_new_topic,name = 'add_new_topic')
+    path('add_new_topic',views.add_new_topic,name = 'add_new_topic'),
+
 ]
